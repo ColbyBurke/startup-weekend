@@ -25,8 +25,6 @@ function displayInside() {
 
     document.getElementById('inside').innerHTML += '<ul id="list"></ul>'
     for (i = 0; i < arr.length; i++) {
-        console.log(products[arr[i]].imageurl);
-        
         document.getElementById('list').innerHTML += "<li>" + `<img src=${products[arr[i]].imageurl}/>` + '<br/>' + products[arr[i]].title + '<br/>' +products[arr[i]].price +  "</li>"
     }
 
