@@ -13,49 +13,55 @@ header {
   justify-content: space-between;
 }
 .form-row {
-  width: 600px;
-  display: flex;
-  justify-content: center;
+    width: 700px;
+    margin: 0 auto;
+    /*display: flex;
+    justify-content: center;*/
 }
 .searchbar  input{
-  margin-top: 20px;
-  width: 600px;
-  height: 50px;
-  border: 1px solid black;
-  font-size: 20px;
-  background-color: lightblue;
+    margin-top: 20px;
+    width: 700px;
+    height: 50px;
+    border: 1px solid black;
+    font-size: 20px;
+    background-color: #2E8B57;
+    padding: 8px;
+    margin-bottom: 10px
+
 }
-/*utton for search*/
+/*button for search*/
 .go {
-margin-top: 10px;
-display: block;
-width: 200px;
-height: 40px;
-line-height: 40px;
-font-size: 18px;
-font-family: sans-serif;
-text-decoration: none;
-color: #333;
-border: 2px solid #333;
-letter-spacing: 2px;
-text-align: center;
-position: relative;
-transition: all .35s;
+  display: block;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #333;
+  border: 2px solid #333;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
 }
+
 .go span {
 position: relative;
 z-index: 2;
 }
 .go:after{
-position: absolute;
-content: "";
-top: 0;
-left: 0;
-width: 0;
-height: 100%;
-background: lightblue;
-transition: all .35s;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #2E8B57;
+  transition: all .35s;
+  color: white;
 }
+
 .go:hover{
 color: #fff;
 }
@@ -64,19 +70,21 @@ width: 100%;
 }
 /*footer*/
 footer {
+margin-top: 10px;
 position: fixed;
 width: 100%;
 bottom: 0px;
 height: 50px;
-background-color: lightblue;
+background-color: #2E8B57;
 display: flex;
 align-items: center;
 justify-content: flex-end;
 padding-right: 35px;
 }
 ul {
-list-style: none;
+  list-style: none;
 }
+
 .about-us {
 text-decoration: none;
 color: black;
@@ -90,63 +98,110 @@ color: black;
 text-decoration: none;
 }
 .login:hover {
-color: lightblue;
+  color: #2E8B57;
+
+  
 }
 /*sign up*/
 .signUp-container {
-width: 500px;
-margin: 0px auto;
-margin-top: 100px;
-margin-bottom: 150px;
+  width: 500px;
+  margin: 100px auto;
+  margin-bottom: 150px;
 }
 .signUp-container .form-row {
 margin-bottom: 10px;
 font-size: 25px;
 }
 .signUp-container h1 {
-color: lightblue;
+  color: #2E8B57;
 }
 .signUp-container input {
-width: 150px;
-margin-left: 10px;
+  width: 200px;
+  margin-left: 10px;
 }
 .signUp-container p {
 font-size: 16px;
 }
 .signUp-container a {
-color: lightblue;
+  color: #2E8B57;
 }
 /*product*/
 .space {
-margin-left: 100px;
-margin-bottom: 50px;
+  margin-left: 100px;
+  margin-bottom: 50px;
+
 }
 .space img {
-height: 200px;
+  height: 200px;
+  
 }
 /*text*/
 .text{
-width: 50%;
-margin: 0px auto;
-margin-bottom: 200px;
+  width: 50%;
+  margin: 0px auto;
+  margin-bottom: 200px;
+
 }
+
 blockquote{
-font-size: 30px;
-background: white;
-border-left: 10px solid #ccc;
-margin: .5em 10px;
-padding: 0 10px;
-quotes: "\201C""\201D""\2018""\2019";
-padding: 10px 20px;
-line-height: 1.4;
+  font-size: 30px;
+  background: white;
+  border-left: 10px solid #ccc;
+  margin: .5em 10px;
+  padding: 0 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  padding: 10px 20px;
+  line-height: 1.4;
 }
+
 blockquote:before {
-content: open-quote;
-display: inline;
-line-height: 0;
-left: -10px;
-position: relative;
-top: 30px;
-color: #ccc;
-font-size: 3em;
+  content: open-quote;
+  display: inline;
+  line-height: 0;
+  left: -10px;
+  position: relative;
+  top: 30px;
+  color: #ccc;
+  font-size: 3em;
 }
+/* about us*/
+.team img {
+  height: 200px;
+  border-radius: 50%;
+}
+.person {
+  display: flex;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 60px auto;
+}
+.team-title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 50px;
+  color: #2E8B57;
+}
+.person h2 {
+  margin-left: 15px;
+  
+}
+/*inside*/
+li {
+  margin-bottom: 80px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+ul {
+  display: flex;
+}
+
+
+
+
+

@@ -1,5 +1,4 @@
 //portraits, disney, whale, frisbee, ipad, computer, college
-
 const products = {
     "nikoncoolpix": {
         title: 'Nikon CoolPix Camera',
@@ -45,14 +44,14 @@ const products = {
     },
     "canoncamera": {
         title: 'Canon Camera',
-        quality: 'video',
+        quality: ['video', 'whale'],
         imageurl: './images/canoncamera.jpg',
         price:'$598',
         buylink: 'https://www.amazon.com/gp/product/B00894YWD0'
     },
     "nikoncamera": {
         title: 'Nikon Camera',
-        quality: ['portraits','disney'],
+        quality: ['portraits','disney', 'whale'],
         imageurl: './images/nikoncamera.jpg',
         price:'$226',
         buylink: 'https://www.amazon.com/gp/product/B0073HSH8U'
@@ -108,7 +107,6 @@ const products = {
  buylink: 'https://www.amazon.com/gp/product/B0074703CM'
     },
  }
-
 function displayInside() {
     document.getElementById('inside').innerHTML = ''
     let search = document.getElementById('searchbar').value.toLowerCase().split(' ').join('')
@@ -116,7 +114,6 @@ function displayInside() {
     let qualityArr = []
     let keys = Object.keys(products).map(x => x.split(' ').join(' ').toLocaleLowerCase())
     console.log();
-
     console.log(keys);
     for (i = 0; i < keys.length; i++) {
         let regex = new RegExp(keys[i], 'gi')
@@ -124,9 +121,7 @@ function displayInside() {
 
     }
     console.log('arr ' + arr);
-
     document.getElementById('inside').innerHTML += '<ul id="list"></ul>'
-
     if (search.includes('video') && !search.includes('portraits')) {
         for (i = 0; i < keys.length; i++) {
             if (products[keys[i]].quality.includes('video')) {
@@ -134,7 +129,6 @@ function displayInside() {
             }
         }
     }
-
     if (search.includes('video') && search.includes('portraits')) {
         for (i = 0; i < keys.length; i++) {
             if (products[keys[i]].quality.includes('video') && products[keys[i]].quality.includes('portraits')) {
@@ -142,7 +136,6 @@ function displayInside() {
             }
         }
     }
-
     if (search.includes('portraits')) {
         for (i = 0; i < keys.length; i++) {
             if (products[keys[i]].quality.includes('portraits')) {
@@ -150,7 +143,6 @@ function displayInside() {
             }
         }
     }
-
     if (search.includes('disney')) {
         for (i = 0; i < keys.length; i++) {
             if (products[keys[i]].quality.includes('disney')) {
@@ -158,7 +150,6 @@ function displayInside() {
             }
         }
     }
-
     if (search.includes('whale')) {
         for (i = 0; i < keys.length; i++) {
             if (products[keys[i]].quality.includes('whale')) {
@@ -166,7 +157,6 @@ function displayInside() {
             }
         }
     }
-
     if (search.includes('frisbee')) {
         for (i = 0; i < keys.length; i++) {
             if (products[keys[i]].quality.includes('frisbee')) {
@@ -174,7 +164,6 @@ function displayInside() {
             }
         }
     }
-
     if (search.includes('prom')) {
         for (i = 0; i < keys.length; i++) {
             if (products[keys[i]].quality.includes('prom')) {
@@ -182,5 +171,4 @@ function displayInside() {
             }
         }
     }
-
 }
